@@ -2,6 +2,8 @@ import Header from '@/components/sections/header'
 import { Button } from '@/components/ui/button'
 import { ContestsIcon, EventsIcon, HomeIcon, MarketIcon, WikiIcon } from '../public/icons/icons'
 import NavMenu from '@/components/sections/navmenu'
+import ServerInfo from '@/components/sections/serverinfo'
+import ServerIp from '@/components/sections/serverip'
 
 export default function Home() {
   return (
@@ -10,8 +12,12 @@ export default function Home() {
       <Header/>
       {/* CONTENT SECTION */}      
       <div className='flex justify-center space-x-6'>
-        {/* NAVMENU COMPONENT */}  
-        <NavMenu/>
+        {/* NAVMENU COMPONENT */}
+        <div className='flex flex-col space-y-6'>
+          <NavMenu/>
+          <ServerInfo/>
+          <ServerIp/>
+        </div>  
         <div className='w-[51rem]'>
           MAIN
         </div>
